@@ -14,6 +14,8 @@ A few pre-requisites to get this to work properly:
 
     You can view the full Dockerfile and the `entrypoint.sh` file in the source code if you have any questions about what is running and how it is working.
 
+* Optional: You can use the environment variable `-e AWS_PROFILE=<your AWS profile> -e AWS_REGION=<your AWS region>` to pass along a different set of AWS credentials. If one is not provided then Prowler will use the `default` profile and `us-east-1` region.
+
 * One thing, this script takes a while to run. The bigger your AWS instance the longer it will take to run. By default it runs against your whole AWS account but you can start the container manually to run some CLI options to run against certain groups or regions. A to-do is to add that functionality to the Docker run command.
 
 The following repos were used in the build of this image:
